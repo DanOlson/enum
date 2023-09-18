@@ -9,7 +9,7 @@ class Book
 end
 
 class Subject
-  include Enum
+  include Noomer
 
   Math = enum(Book)
   Literature = enum(Book)
@@ -33,7 +33,7 @@ class Coord
 end
 
 class WebEvent
-  include Enum
+  include Noomer
 
   PageLoad = enum
   PageUnload = enum
@@ -42,14 +42,14 @@ class WebEvent
 end
 
 class Color
-  include Enum
+  include Noomer
 
   Red = enum('#ff0000')
   Green = enum('#00ff00')
   Blue = enum('#0000ff')
 end
 
-RSpec.describe Enum do
+RSpec.describe Noomer do
   describe '.enum' do
     it 'returns an subclass of the including class' do
       expect(WebEvent.enum).to be < WebEvent

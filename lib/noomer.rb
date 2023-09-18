@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
-require_relative "enum/version"
+require_relative "noomer/version"
 
-module Enum
+module Noomer
   def self.included(base) = base.extend(ClassMethods)
 
   attr_reader :value

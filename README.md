@@ -1,4 +1,4 @@
-# Enum
+# Noomer
 
 A basic enum implementation for Ruby.
 
@@ -7,7 +7,7 @@ A basic enum implementation for Ruby.
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'enum'
+gem 'noomer'
 ```
 
 And then execute:
@@ -16,15 +16,15 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install enum
+    $ gem install noomer
 
 ## Usage
 
-Define a PORO to hold your variants, and include the `Enum` module. This provides an `enum` method you can use to declare your enum variants.
+Define a PORO to hold your variants, and include the `Noomer` module. This provides an `enum` method you can use to declare your enum variants.
 
 ```ruby
 class Color
-  include Enum
+  include Noomer
 
   # Declare your variants with the `enum` method
   Red = enum
@@ -70,7 +70,7 @@ class Book
 end
 
 class Subject
-  include Enum
+  include Noomer
 
   Math = enum(Book)
   Literature = enum(Book)
@@ -124,7 +124,7 @@ Variants with can be declared with explicit discriminators. A variation on the `
 
 ```ruby
 class Color
-  include Enum
+  include Noomer
 
   Red = enum('#ff0000')
   Green = enum('#00ff00')
@@ -158,4 +158,4 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/DanOlson/enum.
+Bug reports and pull requests are welcome on GitHub at https://github.com/DanOlson/noomer.
